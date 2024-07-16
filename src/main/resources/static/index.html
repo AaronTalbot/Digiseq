@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Admin Portal</h1>
+
+    <!-- Registration and Login Forms -->
+    <div id="registration-form">
+        <h2>Register</h2>
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name">
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name">
+        <label for="username">Username:</label>
+        <input type="text" id="username">
+        <label for="password">Password:</label>
+        <input type="password" id="password">
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+        <label for="telephone">Telephone Number:</label>
+        <input type="text" id="telephone">
+        <button onclick="registerUser()">Register</button>
+    </div>
+
+    <div id="login-form">
+        <h2>Login</h2>
+        <label for="login-username">Username:</label>
+        <input type="text" id="login-username">
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password">
+        <button onclick="loginUser()">Login</button>
+    </div>
+
+    <!-- Client Organisations Section -->
+    <div id="client-organisations">
+        <h2>Client Organisations</h2>
+        <button onclick="showCreateOrganisationForm()">Add Organisation</button>
+        <div id="organisation-list"></div>
+    </div>
+
+    <!-- Organisation Form -->
+    <div id="organisation-form" style="display: none;">
+        <h2 id="form-title">Add New Organisation</h2>
+        <input type="hidden" id="organisation-id">
+        <label for="organisation-name">Name:</label>
+        <input type="text" id="organisation-name">
+        <label for="registration-date">Registration Date:</label>
+        <input type="date" id="registration-date">
+        <label for="expiry-date">Expiry Date:</label>
+        <input type="date" id="expiry-date">
+        <button onclick="saveOrganisation()">Save</button>
+        <button onclick="hideCreateOrganisationForm()">Cancel</button>
+    </div>
+
+    <!-- Personnel Section -->
+    <div id="personnel-section" style="display: none;">
+        <h2>Personnel</h2>
+        <button onclick="showCreatePersonnelForm()">Add Personnel</button>
+        <div id="personnel-list"></div>
+    </div>
+
+    <!-- Personnel Form -->
+    <div id="personnel-form" style="display: none;">
+        <h2 id="personnel-form-title">Add New Personnel</h2>
+        <input type="hidden" id="personnel-id">
+        <input type="hidden" id="organisation-id-for-personnel">
+        <label for="personnel-first-name">First Name:</label>
+        <input type="text" id="personnel-first-name">
+        <label for="personnel-last-name">Last Name:</label>
+        <input type="text" id="personnel-last-name">
+        <label for="personnel-username">Username:</label>
+        <input type="text" id="personnel-username">
+        <label for="personnel-password">Password:</label>
+        <input type="password" id="personnel-password">
+        <label for="personnel-email">Email:</label>
+        <input type="email" id="personnel-email">
+        <label for="personnel-telephone">Telephone Number:</label>
+        <input type="text" id="personnel-telephone">
+        <button onclick="savePersonnel()">Save</button>
+        <button onclick="hideCreatePersonnelForm()">Cancel</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
